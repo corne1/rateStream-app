@@ -1,0 +1,44 @@
+$primary-color: #4CAF50
+$border-color: #dddddd
+$hover-color: #f1f1f1
+$alternate-color: #f9f9f9
+
+table
+  width: 100%
+  border-collapse: collapse
+  font-family: 'Arial', sans-serif
+  font-size: 14px
+
+  thead
+    background-color: $primary-color
+    color: white
+
+    th
+      padding: 10px
+      text-align: left
+
+  tbody
+    tr
+      border-bottom: 1px solid $border-color
+      transition: background-color 0.2s
+
+      &:nth-child(even)
+        background-color: $alternate-color
+
+      &:hover
+        background-color: $hover-color
+
+    td
+      padding: 10px
+      text-align: right
+      border-right: 1px solid $border-color
+
+      &:first-child
+        text-align: left
+
+      &:last-child
+        border-right: none
+
+td, th
+  border: 1px solid $border-color
+  padding: 8px

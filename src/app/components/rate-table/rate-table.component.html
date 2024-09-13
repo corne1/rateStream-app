@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <th>Время</th>
+      <th>Инструмент</th>
+      <th>Bid</th>
+      <th>Ask</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let rate of rates$ | async">
+      <td>{{ rate.time | date : "short" }}</td>
+      <td>{{ rate.symbol }}</td>
+      <td>{{ rate.bid }}</td>
+      <td>{{ rate.ask }}</td>
+    </tr>
+  </tbody>
+</table>
